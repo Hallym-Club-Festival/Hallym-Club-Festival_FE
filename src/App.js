@@ -4,8 +4,11 @@ import "./App.css";
 import { initVh } from "../src/utils/setVh";
 import React, { useEffect } from "react";
 import QR from "./pages/QR/QR.jsx";
-import Login from "./pages/Login/Login.jsx";
-import Host from "./pages/Host/Host.jsx";
+import Start from "./pages/Start/Start.jsx";
+import Fortune from "./pages/Fortune/Fortune.jsx";
+import Info from "./pages/Info/Info.jsx";
+import Lost from "./pages/Lost/Lost.jsx";
+
 function App() {
   useEffect(() => {
     const cleanup = initVh(); //initVh() cleanup에 대입
@@ -18,8 +21,10 @@ function App() {
       <div className="phone_size">
         <Routes>
           <Route path="/" exact={true} element={<Home />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Host" element={<Host />} />
+          <Route path="/start" element={<Start />} />
+          <Route path="/info" element={<Info />} />
+          <Route path="/lost" element={<Lost />} />
+          <Route path="/fortune" element={<Fortune />} />
         </Routes>
       </div>
     </>
