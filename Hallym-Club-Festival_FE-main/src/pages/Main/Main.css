@@ -1,0 +1,31 @@
+.mainImg {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.categoryMom {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: black;
+  font-size: 15px;
+  font-weight: 900;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  margin-top: 35%;
+}
+
+.category {
+  display: flex;
+  margin-bottom: 10%;
+  background-color: rgba(255, 255, 255, 0.897);
+  width: 85%;
+  height: 7%;
+  border-radius: 30px;
+  justify-content: center;
+  align-items: center;
+}

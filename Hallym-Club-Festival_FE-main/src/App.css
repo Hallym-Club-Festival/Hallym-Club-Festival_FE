@@ -1,0 +1,16 @@
+.phone_size {
+  width: 100%;
+  height: calc(var(--vh, 1vh) * 100);
+}
+
+@media only screen and (max-width: 768px) {
+  .phone_size {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .phone_size {
+    display: none;
+  }
+}
