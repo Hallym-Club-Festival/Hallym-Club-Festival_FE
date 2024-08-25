@@ -1,0 +1,92 @@
+.infoMain {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+.search2 {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    width: 60%;
+    height: 5%;
+    border-radius: 30px;
+    border: none;
+    padding-left: 20px;
+
+}
+.search{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 8%;
+}
+
+.search2::placeholder{
+    font-size: 12px;
+}
+
+.icon {
+    position: absolute;
+    width: 17px;
+    right: 22%;
+    top: 6%;
+}
+
+
+/* 아코디언 메뉴 컨테이너 스타일 */
+.AccordianMenu {
+    height: 80%;
+    width: 80%; /* 원하는 너비를 설정 */
+    border-radius: 4px;
+    overflow: hidden; /* 경계 밖으로 나가는 콘텐츠 숨김 */
+    margin-top: 20%;
+  }
+  
+  /* 아코디언 항목 스타일 */
+  .accordion-item {
+    border: 1px solid #ddd; /* 항목 테두리 */
+    border-radius: 4px;
+    margin-bottom: 5px; /* 항목 간 간격 */
+  }
+  
+  /* 제목 부분 스타일 */
+  .accordion-title {
+    padding: 10px;
+    background-color: #f1f1f1; /* 제목 배경색 */
+    cursor: pointer; /* 클릭 커서 */
+    display: flex;
+    justify-content: space-between; /* 제목과 화살표 간 공간 확보 */
+    align-items: center; /* 수직 중앙 정렬 */
+    font-weight: bold;
+  }
+  
+  /* 아코디언 내용 부분 스타일 */
+  .accordion-content {
+    max-height: 0; /* 기본 상태에서 숨김 */
+    overflow: hidden; /* 넘치는 내용 숨김 */
+    transition: max-height 0.3s ease, padding 0.3s ease; /* 애니메이션 효과 */
+    padding: 0 10px; /* 좌우 패딩 */
+  }
+  
+  /* 아코디언 내용이 펼쳐졌을 때의 스타일 */
+  .accordion-content.show {
+    max-height: 150px; /* 내용이 최대 150px 높이까지 펼쳐지도록 설정 */
+    padding: 10px; /* 내용이 보일 때 패딩 추가 */
+  }
+  
+  /* 화살표 아이콘 스타일 */
+  .arrow {
+    transition: transform 0.3s ease; /* 회전 애니메이션 효과 */
+  }
+  
+  .arrow.up {
+    transform: rotate(180deg); /* 위로 회전 */
+  }
+  
+  .arrow.down {
+    transform: rotate(0deg); /* 원래 방향 유지 */
+  }
+  
