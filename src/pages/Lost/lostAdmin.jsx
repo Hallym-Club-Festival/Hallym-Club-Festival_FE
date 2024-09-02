@@ -53,7 +53,11 @@ const LostAdmin = () => {
           placeholder="위치"
           required
         />
-        <input type="file" onChange={handleFileChange} accept="image/*" />
+        <input
+          type="file"
+          onChange={handleFileChange}
+          accept="image/jpg, image/png"
+        />
         <button type="submit" className="lostAdminButton">
           등록 <FaUpload />
         </button>

@@ -51,7 +51,7 @@ const Lost = () => {
           onChange={onChange}
           placeholder="검색어를 입력하세요"
         />
-        <FaSearch className="lostIcon" />
+        <FaSearch className="lostIcon2" />
       </div>
       <div className="lostItemsContainer">
         {filteredLostItems.map((item) => (
@@ -65,7 +65,6 @@ const Lost = () => {
                 className="lostImg"
               />
             )}
-            $
           </div>
         ))}
       </div>
