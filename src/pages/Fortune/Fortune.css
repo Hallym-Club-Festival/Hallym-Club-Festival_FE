@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "SEBANG_Gothic_Bold";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.Fortune-main {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.treasure-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3개의 열 */
+  grid-template-rows: repeat(2, 1fr); /* 2개의 행 */
+  gap: 10px; /* 이미지 간의 간격 조절 */
+  width: 100%;
+  height: 30%;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3px;
+  overflow: hidden;
+  justify-items: center;
+  align-items: center;
+  padding: 10%; /* 상하좌우 패딩 추가 */
+  box-sizing: border-box;
+}
+.treasuer-img {
+  width: 50%; /* 이미지가 그리드 셀을 채우도록 설정 */
+  height: auto;
+}
+.Fortune-main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.fortuneTitle {
+  position: relative;
+  width: 100%;
+  height: 9%;
+  color: white;
+  align-content: center;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 20px;
+  background: linear-gradient(#0f2027, #203a43, #2c5364);
+  margin-bottom: 3%;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  width: 20%;
+  height: 60px;
+  color: white;
+  font-size: 30px;
+  align-items: center;
+}
+
+.header-mid {
+  display: flex;
+  width: 30%;
+  height: 30px;
+  color: white;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+}
+
+.fotune_wrapper {
+  display: flex;
+  width: 100%;
+  padding: 0 3% 0 3%;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50%;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.f_img {
+  width: 60px;
+  height: 60px;
+  padding: 3% 3% 3% 3%;
+}
+.f_box,
+.f_box2,
+.f_box3,
+.f_box4,
+.f_box5,
+.f_box6 {
+  display: flex;
+  width: 80%;
+  height: 15%;
+  padding: 3% 3% 3% 3%;
+  align-items: center;
+  border-radius: 50px;
+  font-size: 12px;
+  font-family: "SEBANG_Gothic_Bold";
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.f_box {
+  background-color: pink;
+}
+.f_box2 {
+  background-color: orange;
+}
+.f_box3 {
+  background-color: yellow;
+}
+.f_box4 {
+  background-color: green;
+}
+.f_box5 {
+  background-color: skyblue;
+}
+.f_box6 {
+  background-color: purple;
+}
+.delete1,
+.delete2,
+.delete3,
+.delete4,
+.delete5,
+.delete6 {
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  height: 20px;
+  width: 40px;
+  font-family: "SEBANG_Gothic_Bold";
+}

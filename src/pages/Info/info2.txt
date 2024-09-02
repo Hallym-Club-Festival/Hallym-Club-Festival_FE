@@ -1,0 +1,79 @@
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import axios from "axios"; // axios import 추가
+import "./Info.css";
+import Background2 from "../../components/Background/Background2";
+import { FaSearch } from "react-icons/fa";
+import { IoIosArrowBack } from "react-icons/io";
+
+const Info = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [notices, setNotices] = useState([]); // 공지사항 상태 추가
+  const [search, setSearch] = useState("");
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    // 공지사항을 가져오는 API 호출
+    axios
+      .get("/api/notices") // API 엔드포인트에 GET 요청을 보냄
+      .then((response) => {
+        setNotices(response.data); // 응답 데이터를 공지사항 상태로 설정
+      })
+      .catch((error) => {
+        console.error("공지사항을 가져오는 중 오류 발생:", error);
+      });
+  }, []);
+
+  const handleClickmain = () => {
+    navigate("/main");
+  };
+
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const onChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  return (
+    <div className="infoMain">
+      <Background2 />
+      <div className="search">
+        <div className="infoTitle">
+          공지사항 <IoIosArrowBack onClick={handleClickmain} className="icon2" />
+        </div>
+        <div className="input-container">
+          <input
+            type="text"
+            className="search2"
+            value={search}
+            onChange={onChange}
+            placeholder="검색어를 입력하세요"
+          />
+          <FaSearch className="icon" />
+        </div>
+
+        <div className="AccordianMenu">
+          {notices
+            .filter((notice) => notice.title.includes(search)) // 검색 기능 추가
+            .map((notice, index) => (
+              <div className="accordion-item" key={index}>
+                <div className="accordion-title" onClick={() => handleToggle(index)}>
+                  {notice.title}
+                  <span className={`arrow ${activeIndex === index ? "up" : "down"}`}>
+                    ▲
+                  </span>
+                </div>
+                <div className={`accordion-content ${activeIndex === index ? "show" : ""}`}>
+                  {notice.content}
+                </div>
+              </div>
+            ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Info;
