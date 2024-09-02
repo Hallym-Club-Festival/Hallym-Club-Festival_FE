@@ -15,12 +15,13 @@ import Fortune6 from "../../assets/images/Fortune6.png";
 import for1 from "../../assets/images/for1.png";
 import for2 from "../../assets/images/for2.png";
 import for3 from "../../assets/images/for3.png";
+import for4 from "../../assets/images/for4.png";
 
 const Fotune = () => {
   const [boxes, setBoxes] = useState([
     {
       id: 1,
-      text: "헬로 베이크샵(크랙소금빵 + 아메리카노)",
+      text: "네모커피(스콘,음료 쿠폰)",
       image: Hello,
       backgroundColor: "rgba(255, 192, 203, 0.7)", // pink with 70% opacity
     },
@@ -45,7 +46,7 @@ const Fotune = () => {
     {
       id: 5,
       text: "썬쿠키(미니쿠키2개 + 휘낭시에)",
-      image: Nemo,
+      image: for4,
       backgroundColor: "rgba(135, 206, 235, 0.7)", // skyblue with 70% opacity
     },
     {
