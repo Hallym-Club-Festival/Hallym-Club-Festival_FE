@@ -60,6 +60,7 @@ const Info = () => {
           />
           <FaSearch className="icon" />
         </div>
+        {/* <div></div> */}
         <div className="AccordianMenu">
           {filteredAnnouncements.map((announcement, index) => (
             <div className="accordion-item" key={announcement.NoticeID}>
