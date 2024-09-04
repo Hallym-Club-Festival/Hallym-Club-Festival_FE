@@ -95,8 +95,8 @@ const Fotune = () => {
     <div className="Fortune-main">
       <Background2 />
       <div className="fortuneTitle">
-        보물찾기{" "}
-        <IoIosArrowBack onClick={handleClickmain} className="mapIcon" />
+        보물찾기
+        <IoIosArrowBack onClick={handleClickmain} className="fortuneIcon" />
       </div>
       <div className="treasure-container">
         <img className="treasuer-img" src={Fortune1} alt="" />

@@ -49,6 +49,11 @@
   margin-bottom: 3%;
   font-family: "SEBANG_Gothic_Bold";
 }
+.fortuneIcon {
+  position: absolute;
+  left: 2%;
+  font-size: 30px;
+}
 
 .header-left,
 .header-right {
