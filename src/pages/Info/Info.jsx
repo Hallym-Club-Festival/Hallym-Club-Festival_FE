@@ -16,9 +16,9 @@ const Info = () => {
     const fetchAnnouncements = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/announcements"
+          "http://api-hallym-club-festival.com:3000/notices/" //notices
         );
-        setAnnouncements(response.data);
+        setAnnouncements(response.data.notices);
       } catch (error) {
         console.error("공지사항 불러오기 오류:", error);
       }
@@ -39,7 +39,7 @@ const Info = () => {
   };
 
   const filteredAnnouncements = announcements.filter(
-    (a) => a.title.includes(search) || a.content.includes(search)
+    (a) => a.Title.includes(search) || a.Content.includes(search)
   );
 
   return (
@@ -60,15 +60,14 @@ const Info = () => {
           />
           <FaSearch className="icon" />
         </div>
-
         <div className="AccordianMenu">
           {filteredAnnouncements.map((announcement, index) => (
-            <div className="accordion-item" key={announcement.id}>
+            <div className="accordion-item" key={announcement.NoticeID}>
               <div
                 className="accordion-title"
                 onClick={() => handleToggle(index)}
               >
-                {announcement.title}
+                {announcement.Title}
                 <span
                   className={`arrow ${activeIndex === index ? "up" : "down"}`}
                 >
@@ -80,7 +79,7 @@ const Info = () => {
                   activeIndex === index ? "show" : ""
                 }`}
               >
-                {announcement.content}
+                {announcement.Content}
               </div>
             </div>
           ))}

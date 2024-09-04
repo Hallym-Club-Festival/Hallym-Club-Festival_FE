@@ -12,6 +12,7 @@
   border-radius: 30px;
   border: none;
   padding-left: 20px;
+  font-family: "SEBANG_Gothic_Bold";
 }
 .search {
   display: flex;
@@ -29,12 +30,12 @@
   position: absolute;
   width: 20px;
   left: 3%;
-  top: 30%;
+  top: 37%;
 }
 .infoTitle {
   position: relative;
-  background-color: #03132c;
-  height: 10%;
+  background: linear-gradient(#0f2027, #203a43, #2c5364);
+  height: 9%;
   width: 100%;
   align-content: center;
   text-align: center;
@@ -42,6 +43,7 @@
   color: white;
   font-weight: bolder;
   font-size: 20px;
+  font-family: "SEBANG_Gothic_Bold";
 }
 .input-container {
   position: relative;
@@ -71,6 +73,7 @@
   border-radius: 4px;
   margin-bottom: 5px; /* 항목 간 간격 */
   border: none;
+  font-family: "SEBANG_Gothic_Bold";
 }
 
 /* 제목 부분 스타일 */
@@ -85,6 +88,7 @@
   border-radius: 10px;
   color: white;
   height: 30px;
+  font-family: "SEBANG_Gothic_Bold";
 }
 
 /* 아코디언 내용 부분 스타일 */
@@ -94,7 +98,7 @@
   overflow: hidden; /* 넘치는 내용 숨김 */
   transition: max-height 0.3s ease, padding 0.3s ease; /* 애니메이션 효과 */
   padding: 0 10px; /* 좌우 패딩 */
-  background-color: rgba(128, 128, 128, 0.568);
+
   color: black;
   font-weight: 500;
   border-radius: 10px;

@@ -8,7 +8,7 @@ const Admin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/announcements", {
+      await axios.post("http://localhost:3000/api/notices", {
         title,
         content,
       });

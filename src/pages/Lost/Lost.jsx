@@ -15,9 +15,10 @@ const Lost = () => {
     const fetchLostItems = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/lost-items"
+          "http://api-hallym-club-festival.com:3000/lostItems/" //lostItems
         );
-        setLostItems(response.data);
+        console.log(response.data);
+        setLostItems(response.data.lostItems);
       } catch (error) {
         console.error("분실물 불러오기 오류:", error);
       }
@@ -34,7 +35,7 @@ const Lost = () => {
   };
 
   const filteredLostItems = lostItems.filter(
-    (item) => item.title.includes(search) || item.location.includes(search)
+    (item) => item.ItemName.includes(search) || item.FoundIn.includes(search)
   );
 
   return (
@@ -55,13 +56,13 @@ const Lost = () => {
       </div>
       <div className="lostItemsContainer">
         {filteredLostItems.map((item) => (
-          <div className="item1" key={item.id}>
-            <p className="bigTitle">{item.title}</p>
-            <p className="smallTitle">{item.location}</p>
-            {item.imagePath && (
+          <div className="item1" key={item.ItemID}>
+            <p className="bigTitle">{item.ItemName}</p>
+            <p className="smallTitle">{item.FoundIn}</p>
+            {item.Image.ImageURL && (
               <img
-                src={`http://localhost:5000/${item.imagePath}`}
-                alt={item.title}
+                src={item.Image.ImageURL}
+                alt={item.ItemName}
                 className="lostImg"
               />
             )}
