@@ -100,7 +100,6 @@
   overflow: hidden; /* 넘치는 내용 숨김 */
   transition: max-height 0.3s ease, padding 0.3s ease; /* 애니메이션 효과 */
   padding: 0 10px; /* 좌우 패딩 */
-
   color: black;
   font-weight: 500;
   border-radius: 10px;

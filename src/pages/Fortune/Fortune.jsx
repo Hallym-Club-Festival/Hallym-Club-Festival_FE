@@ -12,6 +12,8 @@ import Fortune3 from "../../assets/images/Fortune3.png";
 import Fortune4 from "../../assets/images/Fortune4.png";
 import Fortune5 from "../../assets/images/Fortune5.png";
 import Fortune6 from "../../assets/images/Fortune6.png";
+import Fortune7 from "../../assets/images/Fortune7.png"; // 추가
+
 import for1 from "../../assets/images/for1.png";
 import for2 from "../../assets/images/for2.png";
 import for3 from "../../assets/images/for3.png";
@@ -57,6 +59,15 @@ const Fotune = () => {
     },
   ]);
 
+  const [treasureImages, setTreasureImages] = useState([
+    Fortune1,
+    Fortune2,
+    Fortune3,
+    Fortune4,
+    Fortune5,
+    Fortune6,
+  ]); // 상단 이미지 배열
+
   const navigate = useNavigate();
 
   const handleClickmain = () => {
@@ -64,11 +75,13 @@ const Fotune = () => {
   };
 
   useEffect(() => {
-    // 서버에서 관리자 페이지의 요청을 수신하고 `boxes`의 상태를 업데이트
+    // 서버에서 관리자 페이지의 요청을 수신하고 `boxes`와 `treasureImages`의 상태를 업데이트
     axios
       .get("http://api-hallym-club-festival.com:3000/treasures/")
       .then((response) => {
         const { treasures } = response.data;
+
+        // boxes 상태 업데이트
         const updatedBoxes = boxes.map((box) => {
           const matchingTreasure = treasures.find(
             (treasure) => treasure.TreasureID === box.id
@@ -81,7 +94,20 @@ const Fotune = () => {
                 : box.backgroundColor,
           };
         });
-        setBoxes(updatedBoxes); // 상태 업데이트
+
+        setBoxes(updatedBoxes);
+
+        // treasureImages 상태 업데이트
+        const updatedImages = treasureImages.map((image, index) => {
+          const matchingTreasure = treasures.find(
+            (treasure) => treasure.TreasureID === index + 1 // 배열 인덱스가 1부터 시작하므로 +1
+          );
+          return matchingTreasure && matchingTreasure.TreasureCount === 0
+            ? Fortune7
+            : image;
+        });
+
+        setTreasureImages(updatedImages); // 상단 이미지 업데이트
       })
       .catch((error) => {
         console.error(
@@ -99,12 +125,14 @@ const Fotune = () => {
         <IoIosArrowBack onClick={handleClickmain} className="fortuneIcon" />
       </div>
       <div className="treasure-container">
-        <img className="treasuer-img" src={Fortune1} alt="" />
-        <img className="treasuer-img" src={Fortune2} alt="" />
-        <img className="treasuer-img" src={Fortune3} alt="" />
-        <img className="treasuer-img" src={Fortune4} alt="" />
-        <img className="treasuer-img" src={Fortune5} alt="" />
-        <img className="treasuer-img" src={Fortune6} alt="" />
+        {treasureImages.map((image, index) => (
+          <img
+            key={index}
+            className="treasuer-img f_img" // f_img 클래스 추가
+            src={image}
+            alt={`Fortune ${index + 1} 이미지`}
+          />
+        ))}
       </div>
       <div className="fotune_wrapper">
         {boxes.map((box) => (
