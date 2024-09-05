@@ -115,7 +115,7 @@ const Fotune = () => {
           error
         );
       });
-  }, []); // 컴포넌트가 마운트될 때 한 번만 실행
+  }, [boxes, treasureImages]); // 컴포넌트가 마운트될 때 한 번만 실행
 
   return (
     <div className="Fortune-main">

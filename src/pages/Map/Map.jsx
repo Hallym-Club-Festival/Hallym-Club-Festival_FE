@@ -5,7 +5,7 @@ import "../Map/Map.css";
 import { IoIosArrowBack } from "react-icons/io";
 import CatalogItem from "./Catalog";
 import { FaSearch } from "react-icons/fa";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Map = () => {
   const [activeTab, setActiveTab] = useState("day1");

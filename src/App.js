@@ -9,9 +9,6 @@ import Fortune from "./pages/Fortune/Fortune.jsx";
 import Info from "./pages/Info/Info.jsx";
 import Lost from "./pages/Lost/Lost.jsx";
 import Map from "./pages/Map/Map.jsx";
-import Admin from "./pages/Info/infoAdmin.jsx";
-import LostAdmin from "./pages/Lost/lostAdmin.jsx";
-import FortuneAdmin from "./pages/Fortune/fortuneAdmin.jsx";
 
 function App() {
   useEffect(() => {
@@ -30,9 +27,6 @@ function App() {
           <Route path="/lost" element={<Lost />} />
           <Route path="/fortune" element={<Fortune />} />
           <Route path="/map" element={<Map />} />
-          <Route path="/infoadmin" element={<Admin />} />
-          <Route path="/lostadmin" element={<LostAdmin />} />
-          <Route path="/fortuneadmin" element={<FortuneAdmin />} />
         </Routes>
       </div>
     </>
