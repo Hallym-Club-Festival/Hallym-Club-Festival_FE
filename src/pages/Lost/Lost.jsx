@@ -15,7 +15,7 @@ const Lost = () => {
     const fetchLostItems = async () => {
       try {
         const response = await axios.get(
-          "https://api-hallym-club-festival.com/lostItems/" //lostItems
+          "https://api-hallym-club-festival.com/lostItems/"
         );
         console.log(response.data);
         setLostItems(response.data.lostItems);
@@ -57,21 +57,25 @@ const Lost = () => {
         <FaSearch className="lostIcon2" />
       </div>
       <div className="lostItemsContainer">
-        {filteredLostItems.map((item) => (
-          <div className="item1" key={item.ItemID}>
-            {item.Image.ImageURL && (
-              <img
-                src={item.Image.ImageURL}
-                alt={item.ItemName}
-                className="lostImg"
-              />
-            )}
-            <div className="titleWrraper">
-              <p className="bigTitle">{item.ItemName}</p>
-              <p className="smallTitle">{item.FoundIn}</p>
+        {filteredLostItems && filteredLostItems.length > 0 ? (
+          filteredLostItems.map((item) => (
+            <div className="item1" key={item.ItemID}>
+              {item.Image.ImageURL && (
+                <img
+                  src={item.Image.ImageURL}
+                  alt={item.ItemName}
+                  className="lostImg"
+                />
+              )}
+              <div className="titleWrraper">
+                <p className="bigTitle">{item.ItemName}</p>
+                <p className="smallTitle">{item.FoundIn}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <div className="noneItem">분실물이 없습니다.</div>
+        )}
       </div>
     </div>
   );

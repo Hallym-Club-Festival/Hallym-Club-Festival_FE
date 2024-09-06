@@ -99,3 +99,8 @@
   margin-top: 10%;
   overflow-y: auto;
 }
+
+.noneItem {
+  color: white;
+  text-align: center;
+}

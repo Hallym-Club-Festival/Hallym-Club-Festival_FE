@@ -63,28 +63,32 @@ const Info = () => {
         </div>
         {/* <div></div> */}
         <div className="AccordianMenu">
-          {filteredAnnouncements.map((announcement, index) => (
-            <div className="accordion-item" key={announcement.NoticeID}>
-              <div
-                className="accordion-title"
-                onClick={() => handleToggle(index)}
-              >
-                {announcement.Title}
-                <span
-                  className={`arrow ${activeIndex === index ? "up" : "down"}`}
+          {filteredAnnouncements && filteredAnnouncements.length > 0 ? (
+            filteredAnnouncements.map((announcement, index) => (
+              <div className="accordion-item" key={announcement.NoticeID}>
+                <div
+                  className="accordion-title"
+                  onClick={() => handleToggle(index)}
                 >
-                  ▲
-                </span>
+                  {announcement.Title}
+                  <span
+                    className={`arrow ${activeIndex === index ? "up" : "down"}`}
+                  >
+                    ▲
+                  </span>
+                </div>
+                <div
+                  className={`accordion-content ${
+                    activeIndex === index ? "show" : ""
+                  }`}
+                >
+                  {announcement.Content}
+                </div>
               </div>
-              <div
-                className={`accordion-content ${
-                  activeIndex === index ? "show" : ""
-                }`}
-              >
-                {announcement.Content}
-              </div>
-            </div>
-          ))}
+            ))
+          ) : (
+            <div className="noneItem">공지사항이 없습니다.</div>
+          )}
         </div>
       </div>
     </div>
