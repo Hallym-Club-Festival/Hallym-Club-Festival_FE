@@ -6,8 +6,8 @@
   font-style: normal;
 }
 .Fortune-main {
-  overflow-y: auto;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .treasure-container {
@@ -18,7 +18,6 @@
   width: 100%;
   height: 30%;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 3px;
   overflow: hidden;
   justify-items: center;
@@ -83,7 +82,6 @@
   justify-content: space-around;
   height: 50%;
   align-items: center;
-  margin-top: 10%;
 }
 
 .f_img {

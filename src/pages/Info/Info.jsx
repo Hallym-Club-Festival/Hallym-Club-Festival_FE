@@ -16,7 +16,7 @@ const Info = () => {
     const fetchAnnouncements = async () => {
       try {
         const response = await axios.get(
-          "http://api-hallym-club-festival.com:3000/notices/" //notices
+          "https://api-hallym-club-festival.com:3000/notices/" //notices
         );
         setAnnouncements(response.data.notices);
       } catch (error) {
