@@ -1,9 +1,13 @@
 import React from "react";
 import "./QR.css";
+import qrImg from "../../assets/images/qr.jpg";
+
 const QR = () => {
   return (
     <div className="qr">
-      <div>모바일로 접속해주세요.</div>
+      <div className="qr-imgcontainer">
+        <img src={qrImg} alt="" width="700px" height="700px" />
+      </div>
     </div>
   );
 };
