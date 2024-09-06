@@ -42,7 +42,9 @@ const Lost = () => {
     <div className="lostMain">
       <Background2 />
       <div className="lostTitle">
-        분실물 <IoIosArrowBack onClick={handleClickMain} className="lostIcon" />
+        <IoIosArrowBack onClick={handleClickMain} className="lostIcon" />
+        <p>분실물</p>
+        <div style={{ width: "10px" }}></div>
       </div>
       <div className="lostSearch">
         <input
@@ -57,8 +59,6 @@ const Lost = () => {
       <div className="lostItemsContainer">
         {filteredLostItems.map((item) => (
           <div className="item1" key={item.ItemID}>
-            <p className="bigTitle">{item.ItemName}</p>
-            <p className="smallTitle">{item.FoundIn}</p>
             {item.Image.ImageURL && (
               <img
                 src={item.Image.ImageURL}
@@ -66,6 +66,10 @@ const Lost = () => {
                 className="lostImg"
               />
             )}
+            <div className="titleWrraper">
+              <p className="bigTitle">{item.ItemName}</p>
+              <p className="smallTitle">{item.FoundIn}</p>
+            </div>
           </div>
         ))}
       </div>

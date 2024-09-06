@@ -121,8 +121,9 @@ const Fotune = () => {
     <div className="Fortune-main">
       <Background2 />
       <div className="fortuneTitle">
-        보물찾기
         <IoIosArrowBack onClick={handleClickmain} className="fortuneIcon" />
+        <p>보물찾기</p>
+        <div style={{ width: "30px" }}></div>
       </div>
       <div className="treasure-container">
         {treasureImages.map((image, index) => (

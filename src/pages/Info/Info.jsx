@@ -47,8 +47,9 @@ const Info = () => {
       <Background2 />
       <div className="search">
         <div className="infoTitle">
-          공지사항{" "}
           <IoIosArrowBack onClick={handleClickmain} className="icon2" />
+          <p>공지사항</p>
+          <div style={{ width: "15px" }}></div>
         </div>
         <div className="input-container">
           <input
