@@ -8,8 +8,7 @@
 .Fortune-main {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: hidden;
 }
 
 .treasure-container {
@@ -84,6 +83,7 @@
   justify-content: space-around;
   height: 60%;
   align-items: center;
+  overflow-y: auto;
 }
 
 .f_img {
