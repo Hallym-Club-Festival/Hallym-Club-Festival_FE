@@ -3,8 +3,7 @@
   width: 100vw;
   height: 100vh;
   background-image: url("../../assets/images/Background.jpg");
-  background-size: contain; /* 이미지가 잘리지 않고 화면에 맞게 조정 */
+  background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat;
   z-index: -1;
 }

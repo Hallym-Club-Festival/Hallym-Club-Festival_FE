@@ -102,7 +102,10 @@ const Map = () => {
       <Background2 />
 
       <div className="mapTitle">
-        지도 <IoIosArrowBack onClick={handleClickmain} className="mapIcon" />
+        <div className="mapTitleson1">지도</div>{" "}
+        <div className="mapTitleson2">
+          <IoIosArrowBack onClick={handleClickmain} className="mapIcon" />
+        </div>
       </div>
       <div className="mapImg-container">
         <img className="mapImg" src={mapImg} alt="" />

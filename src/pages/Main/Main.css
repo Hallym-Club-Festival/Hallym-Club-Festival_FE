@@ -28,3 +28,9 @@
   width: 150px;
   height: 150px;
 }
+
+@media (max-width: 768px) {
+  .background_style {
+    background-size: contain; /* 작은 화면에서는 contain으로 조정 */
+  }
+}
