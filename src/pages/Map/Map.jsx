@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Background2 from "../../components/Background/Background2";
-import mapImg from "../../assets/images/Map.png";
+import mapsvg from "../../assets/images/Map.svg";
 import "../Map/Map.css";
 import { IoIosArrowBack } from "react-icons/io";
 import CatalogItem from "./Catalog";
@@ -108,7 +108,7 @@ const Map = () => {
         </div>
       </div>
       <div className="mapImg-container">
-        <img className="mapImg" src={mapImg} alt="" />
+        <img className="mapImg" src={mapsvg} alt="" />
       </div>
       <div className="mapInput-container">
         <input
