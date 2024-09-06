@@ -6,6 +6,8 @@
   font-style: normal;
 }
 .Fortune-main {
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
 }
@@ -80,7 +82,7 @@
   width: 100%;
   flex-direction: column;
   justify-content: space-around;
-  height: 50%;
+  height: 60%;
   align-items: center;
 }
 
@@ -124,18 +126,4 @@
 }
 .f_box6 {
   background-color: purple;
-}
-.delete1,
-.delete2,
-.delete3,
-.delete4,
-.delete5,
-.delete6 {
-  background-color: red;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  height: 20px;
-  width: 40px;
-  font-family: "SEBANG_Gothic_Bold";
 }
