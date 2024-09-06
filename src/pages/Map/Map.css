@@ -32,6 +32,7 @@
   margin-bottom: 3%;
   font-family: "SEBANG_Gothic_Bold";
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .mapIcon {
