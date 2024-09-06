@@ -1,24 +1,35 @@
 .mainImg {
   display: flex;
+  flex-direction: column-reverse;
   width: 100vw;
   height: 100vh;
-  flex-direction: column-reverse;
   overflow: hidden;
 }
 
 .categoryMom {
   height: 40%;
-  justify-content: center;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
   overflow: hidden;
-  position: relative;
-  bottom: 15%; /* 위치를 부모 요소의 하단에 맞추기 */
+  padding-top: 5%; /* 위쪽 패딩을 조정하여 위치를 위로 이동 */
 }
 
 .img {
   width: 150px;
-  height: 48%;
-  max-width: 80%;
+  height: auto; /* 비율 유지 */
+  max-width: 80%; /* 화면에 맞게 이미지 크기 조정 */
+}
+
+@media (max-width: 768px) {
+  .categoryMom {
+    height: auto; /* 모바일에서는 높이를 자동으로 조정 */
+    padding-top: 3%; /* 모바일에서 패딩 조정 */
+  }
+
+  .img {
+    width: 120px; /* 모바일에서 이미지 크기 조정 */
+    height: auto; /* 비율에 맞게 자동 높이 조정 */
+  }
 }
