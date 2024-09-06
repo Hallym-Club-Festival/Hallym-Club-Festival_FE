@@ -1,12 +1,12 @@
 .mainImg {
   display: flex;
   width: 100vw;
-  height: 100dvh;
+  height: 100vh;
   flex-direction: column-reverse;
 }
 
 .categoryMom {
-  height: 60%;
+  height: 60vh;
   display: grid; /* Grid 레이아웃 사용 */
   grid-template-columns: repeat(2, 1fr); /* 2열로 설정 */
   grid-template-rows: repeat(2, 1fr); /* 2행으로 설정 */
