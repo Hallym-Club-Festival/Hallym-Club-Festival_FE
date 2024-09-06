@@ -1,21 +1,31 @@
 .mainImg {
   display: flex;
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
   flex-direction: column-reverse;
 }
 
 .categoryMom {
-  height: 40%;
-  justify-content: center;
   display: flex;
-  flex-wrap: wrap;
+  height: 60%;
+  justify-content: center;
   gap: 4px;
-  margin-bottom: 30%;
+  flex-direction: column;
+
+  align-items: center;
 }
 
-.img {
-  width: 40%;
-  height: 40%;
-  max-width: 100%;
+.main-img-container1 {
+  height: 50%;
+  align-content: flex-end;
+}
+.main-img-container2 {
+  height: 50%;
+  align-items: center;
+  justify-items: center;
+}
+
+.main-category-img {
+  width: 150px;
+  height: 150px;
 }

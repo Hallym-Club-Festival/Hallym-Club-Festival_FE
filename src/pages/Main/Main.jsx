@@ -26,15 +26,34 @@ const Main = () => {
     <div className="mainImg">
       <Background />
       <div className="categoryMom">
-        <img onClick={handleClickinfo} className="img" src={Mainimg1} alt="" />
-        <img onClick={handleClickmap} className="img" src={Mainimg2} alt="" />
-        <img
-          onClick={handleClicktreasure}
-          className="img"
-          src={Mainimg3}
-          alt=""
-        />
-        <img onClick={handleClicklost} className="img" src={Mainimg4} alt="" />
+        <div className="main-img-container1">
+          <img
+            onClick={handleClickinfo}
+            className="main-category-img"
+            src={Mainimg1}
+            alt=""
+          />
+          <img
+            onClick={handleClickmap}
+            className="main-category-img"
+            src={Mainimg2}
+            alt=""
+          />
+        </div>
+        <div className="main-img-container2">
+          <img
+            onClick={handleClicktreasure}
+            className="main-category-img"
+            src={Mainimg3}
+            alt=""
+          />
+          <img
+            onClick={handleClicklost}
+            className="main-category-img"
+            src={Mainimg4}
+            alt=""
+          />
+        </div>
       </div>
     </div>
   );
