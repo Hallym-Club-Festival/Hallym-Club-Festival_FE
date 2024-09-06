@@ -45,7 +45,7 @@
   flex-direction: column;
   display: flex;
   height: 65%;
-  background-color: #03132ccc;
+
   align-items: center;
   overflow-y: auto;
 }
