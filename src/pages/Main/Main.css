@@ -13,10 +13,11 @@
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 30%;
+  overflow: hidden;
 }
 
 .img {
-  width: 150px;
+  width: 130px;
   height: 50%;
   max-width: 100%;
 }
