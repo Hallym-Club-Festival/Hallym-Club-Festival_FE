@@ -22,4 +22,5 @@
   width: 130px; /* 이미지 너비 설정 */
   height: 130px; /* 이미지 높이를 설정하여 정사각형 형태로 만듦 */
   object-fit: cover; /* 이미지 비율을 유지하면서 컨테이너에 맞게 잘림 */
+  box-sizing: border-box;
 }

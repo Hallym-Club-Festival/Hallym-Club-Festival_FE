@@ -15,7 +15,7 @@ const Lost = () => {
     const fetchLostItems = async () => {
       try {
         const response = await axios.get(
-          "http://api-hallym-club-festival.com:3000/lostItems/" //lostItems
+          "https://api-hallym-club-festival.com/lostItems/" //lostItems
         );
         console.log(response.data);
         setLostItems(response.data.lostItems);
