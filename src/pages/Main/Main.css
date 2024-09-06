@@ -12,8 +12,8 @@
   grid-template-rows: repeat(2, 1fr); /* 2행으로 설정 */
   align-items: center; /* Grid 아이템의 세로 정렬을 가운데로 설정 */
   justify-items: center; /* Grid 아이템의 가로 정렬을 가운데로 설정 */
-  gap: 0px; /* 행과 열 사이의 간격을 0으로 설정 */
-  padding: 13%; /* 컨테이너의 패딩을 0으로 설정 */
+
+  padding: 15%; /* 컨테이너의 패딩을 0으로 설정 */
   box-sizing: border-box;
   overflow: hidden;
 }
