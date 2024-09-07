@@ -37,6 +37,12 @@
   height: 100%;
   flex-direction: column;
 }
+.fortuneText {
+  color: red;
+  font-size: 10px;
+  text-align: center;
+  font-family: "SEBANG_Gothic_Bold";
+}
 .fortuneTitle {
   display: flex;
   justify-content: space-between;

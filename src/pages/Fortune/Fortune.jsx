@@ -125,6 +125,9 @@ const Fotune = () => {
         <p>보물찾기</p>
         <div style={{ width: "30px" }}></div>
       </div>
+      <div className="fortuneText">
+        *당일 준비된 수량 소진 시 회색으로 색상이 변경됩니다.
+      </div>
       <div className="treasure-container">
         {treasureImages.map((image, index) => (
           <img
