@@ -77,7 +77,7 @@ const Fotune = () => {
   useEffect(() => {
     // 서버에서 관리자 페이지의 요청을 수신하고 `boxes`와 `treasureImages`의 상태를 업데이트
     axios
-      .get("https://api-hallym-club-festival.com:3000/treasures/")
+      .get("https://api-hallym-club.site/treasures/")
       .then((response) => {
         const { treasures } = response.data;
 
