@@ -24,7 +24,7 @@ const Fotune = () => {
     {
       id: 1,
       text: "네모커피(스콘,음료 쿠폰)",
-      image: Hello,
+      image: Nemo,
       backgroundColor: "rgba(255, 192, 203, 0.7)", // #ffaead
     },
     {
@@ -54,7 +54,7 @@ const Fotune = () => {
     {
       id: 6,
       text: "헬로베이크샵(크랙소금빵 + 아메리카노)",
-      image: Nemo,
+      image: Hello,
       backgroundColor: "rgba(189, 178, 255, 0.7)", // #bdb2ff
     },
   ]);
