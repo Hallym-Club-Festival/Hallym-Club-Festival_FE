@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Background2 from "../../components/Background/Background2";
-import mapsvg from "../../assets/images/Map.svg";
+import mapsvg from "../../assets/images/Map.jpg";
 import "../Map/Map.css";
 import { IoIosArrowBack } from "react-icons/io";
 import CatalogItem from "./Catalog";
@@ -67,20 +67,20 @@ const Map = () => {
   ];
 
   const catalogData3 = [
-    { number: 1, text: "스네이크" },
-    { number: 2, text: "봉현회" },
-    { number: 3, text: "록스" },
+    { number: 1, text: "춤바람" },
+    { number: 2, text: "해강박" },
+    { number: 3, text: "FVI" },
     { number: 4, text: "영상틀" },
     { number: 5, text: "먹메" },
-    { number: 6, text: "춤바람" },
-    { number: 7, text: "카오스" },
-    { number: 8, text: "힙합PD" },
-    { number: 9, text: "한울회" },
-    { number: 10, text: "해강박" },
-    { number: 11, text: "FVI" },
-    { number: 12, text: "스카이" },
-    { number: 13, text: "HDIY" },
-    { number: 14, text: "CCC" },
+    { number: 6, text: "카오스" },
+    { number: 7, text: "스네이크" },
+    { number: 8, text: "CCC" },
+    { number: 9, text: "힙합PD" },
+    { number: 10, text: "스카이" },
+    { number: 11, text: "HDIY" },
+    { number: 12, text: "룩스" },
+    { number: 13, text: "한울회" },
+    { number: 14, text: "봉현회" },
   ];
 
   // 현재 활성 탭에 따른 데이터 반환
